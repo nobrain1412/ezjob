@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\JobController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('client/index');
+});
+
+Route::prefix('admin')->group(function(){
+    Route::get('/',[DashboardController::class,'index'])->name('admin');
+    //job
+    Route::prefix('job')->group(function(){
+        Route::get('/',[JobController::class,'index'])->name('job');
+    });
 });
