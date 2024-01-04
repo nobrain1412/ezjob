@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\JobController;
+use App\Http\Controllers\Admin\JobTypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,5 +26,14 @@ Route::prefix('admin')->group(function(){
     //job
     Route::prefix('job')->group(function(){
         Route::get('/',[JobController::class,'index'])->name('job');
+    });
+    //job type
+    Route::prefix('job-type')->group(function(){
+        Route::get('/',[JobTypeController::class,'index'])->name('jobType');
+    });
+    //company
+    Route::prefix('company')->group(function(){
+        Route::get('/',[CompanyController::class,'index'])->name('company');
+        Route::match(['GET','POST'],'/add', [CompanyController::class,'create'])->name('company.add');
     });
 });
