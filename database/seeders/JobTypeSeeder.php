@@ -16,6 +16,7 @@ class JobTypeSeeder extends Seeder
         $data = [
             ['name' => 'Chính Thức', 'created_at' => now(), 'updated_at' => now()],
             ['name' => 'Thời Vụ', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Tại nhà', 'created_at' => now(), 'updated_at' => now()],
             ['name' => 'Khác', 'created_at' => now(), 'updated_at' => now()],
         ];
 

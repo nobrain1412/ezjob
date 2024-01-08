@@ -3,7 +3,7 @@
 @section('content')
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">Thêm mới công ty</h1>
+            <h1 class="mt-4">Sửa công ty</h1>
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                 <li class="breadcrumb-item active">Tables</li>
@@ -16,20 +16,20 @@
                 </div>
             </div>
             <div class=" mb-4">
-                <form method="POST" enctype="multipart/form-data" action="{{ route('company.add') }}">
+                <form method="POST" enctype="multipart/form-data" action="{{ route('company.edit',['id'=>$company->id]) }}">
                     @csrf
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
                                 <input class="form-control" id="" type="text" name="name"
-                                    placeholder="" />
+                                    value="{{$company->name}}" />
                                 <label for="">Tên công ty</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
                                 <input class="form-control" id="" type="text" name="email"
-                                    placeholder="" />
+                                value="{{$company->email}}" />
                                 <label for="">Email</label>
                             </div>
                         </div>
@@ -42,14 +42,14 @@
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
                                 <input class="form-control" id="" type="text" name="address"
-                                    placeholder="" />
+                                value="{{$company->address}}" />
                                 <label for="">Địa chỉ</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
                                 <input class="form-control" id="" type="input" name="map"
-                                    placeholder="" />
+                                value="{{$company->map}}" />
                                 <label for="">Link Google Map</label>
                             </div>
                         </div>
@@ -58,14 +58,14 @@
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
                                 <input class="form-control" id="" type="text" name="phone"
-                                    placeholder="" />
+                                value="{{$company->phone}}" />
                                 <label for="">Số điện thoại</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
                                 <input class="form-control" id="" type="input" name="website"
-                                    placeholder="" />
+                                value="{{$company->website}}" />
                                 <label for="">Website</label>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
                                 <input name="image" type="file" id="image_url" style="display: none">
-                                <img src="https://cdn.discordapp.com/attachments/891355495477174343/1192377128470204446/pngtree-simpe-blue-yellow-twibbon-frame-design-blank-template-transparent-png-image_6220773.png?ex=65a8dabc&is=659665bc&hm=5f29fee1ddf70f5830c0850924346005c9cfd7f8ab169f2548a3ff74c42a1eee&"
+                                <img src="{{ ($company->image == null) ? asset('images/notfound.jpg') : Storage::url('images/'.$company->image) }}"
                                     width="150" height="130" id="image_preview" class="mt-1" alt="">
                             </div>
                         </div>

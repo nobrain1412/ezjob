@@ -14,12 +14,13 @@ return new class extends Migration
         Schema::create('job', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('desc');
+            $table->string('desc')->default('none');
             $table->string('salary');
             $table->string('subsidize');
-            $table->integer('quantity');
-            $table->string('requirement');
-            $table->string('exp');
+            $table->integer('quantity')->default(random_int(10,30));
+            $table->string('requirement')->default('none');
+            $table->string('exp')->default('none');
+            $table->tinyInteger('status')->default(1);
             $table->foreignId('jobTypeId')->constrained('job_type');
             $table->foreignId('categoriesId')->constrained('categories');
             $table->foreignId('shiftId')->constrained('shift');

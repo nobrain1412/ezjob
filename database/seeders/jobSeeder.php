@@ -26,6 +26,7 @@ class jobSeeder extends Seeder
                 'categoriesId' => rand(1, 3), // Giả sử có 3 loại danh mục
                 'shiftId' => rand(1, 3), // Giả sử có 2 ca làm việc
                 'companyId' => rand(1, 10), // Giả sử có 10 công ty
+                'status'=> '1',
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);

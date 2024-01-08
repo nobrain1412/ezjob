@@ -35,5 +35,7 @@ Route::prefix('admin')->group(function(){
     Route::prefix('company')->group(function(){
         Route::get('/',[CompanyController::class,'index'])->name('company');
         Route::match(['GET','POST'],'/add', [CompanyController::class,'create'])->name('company.add');
+        Route::match(['GET','POST'],'/edit/{id}', [CompanyController::class,'edit'])->name('company.edit');
+        Route::get('/delete/{id}',[CompanyController::class,'delete'])->name('company.delete');
     });
 });

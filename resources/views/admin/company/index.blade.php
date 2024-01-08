@@ -1,6 +1,11 @@
 @extends('layout.admin')
 
 @section('content')
+<style>
+    #datatablesSimple tbody tr td{
+        margin-right: 20px !important;
+    }
+</style>
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Quản lý công ty</h1>
@@ -29,6 +34,8 @@
                             <th>image</th>
                             <th>website</th>
                             <th>phone</th>
+                            <th>map</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,9 +44,14 @@
                                 <td>{{$d->name}}</td>
                                 <td>{{$d->address}}</td>
                                 <td>{{$d->email}}</td>
-                                <td>{{$d->image}}</td>
+                                <td><img width="100" src="{{ ($d->image == null) ? asset('images/notfound.jpg') : Storage::url('images/'.$d->image) }}" alt=""></td>
                                 <td>{{$d->website}}</td>
                                 <td>{{$d->phone}}</td>
+                                <td>{{$d->map}}</td>
+                                <td>
+                                    <a href="{{route('company.edit',['id' => $d->id])}}"><button class="btn btn-primary">Sửa</button></a>
+                                    <a href="{{route('company.delete',['id' => $d->id])}}"><button class="btn btn-danger">Xoá</button></a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

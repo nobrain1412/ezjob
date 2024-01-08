@@ -21,6 +21,7 @@ class CompanySeeder extends Seeder
                 'image' => 'image_path_' . $i,
                 'website' => 'http://company' . $i . '.com',
                 'phone' => '123-456-' . str_pad($i, 4, '0', STR_PAD_LEFT),
+                'map' => 'https://maps.app.goo.gl/MVR624D4eUAw64v56',
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
