@@ -10,7 +10,7 @@
     <div class="container-fluid px-4">
         <h1 class="mt-4">Quản lý công ty</h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="{{route('company')}}">Dashboard</a></li>
             <li class="breadcrumb-item active">Tables</li>
         </ol>
         <div class="card mb-4">
@@ -28,6 +28,7 @@
                 <table id="datatablesSimple">
                     <thead>
                         <tr>
+                            <th>id</th>
                             <th>Name</th>
                             <th>address</th>
                             <th>email</th>
@@ -41,13 +42,14 @@
                     <tbody>
                         @foreach ($data as $d )
                             <tr>
+                                <td>{{$d->id}}</td>
                                 <td>{{$d->name}}</td>
                                 <td>{{$d->address}}</td>
                                 <td>{{$d->email}}</td>
                                 <td><img width="100" src="{{ ($d->image == null) ? asset('images/notfound.jpg') : Storage::url('images/'.$d->image) }}" alt=""></td>
                                 <td>{{$d->website}}</td>
                                 <td>{{$d->phone}}</td>
-                                <td>{{$d->map}}</td>
+                                <td><a href="{{$d->map}}">Map</a></td>
                                 <td>
                                     <a href="{{route('company.edit',['id' => $d->id])}}"><button class="btn btn-primary">Sửa</button></a>
                                     <a href="{{route('company.delete',['id' => $d->id])}}"><button class="btn btn-danger">Xoá</button></a>

@@ -22,6 +22,7 @@
                         <a class="nav-link" href="{{ route('jobType') }}">Job type</a>
                         <a class="nav-link" href="{{ route('job') }}">Categories</a>
                         <a class="nav-link" href="{{ route('company') }}">Company</a>
+                        <a class="nav-link" href="{{ route('location') }}">Location</a>
                     </nav>
                 </div>
                 {{-- user --}}

@@ -20,40 +20,33 @@
                                 <div class="box">
                                     <p>
                                         <input type="checkbox" id="c9" name="cb">
-                                        <label for="c9">Jobs in Delhi  <span>(214)</span></label>
+                                        <label for="c9">Hà nam  <span>(214)</span></label>
 
                                         <p>
                                             <input type="checkbox" id="c10" name="cb">
-                                            <label for="c10">Jobs in Mumbai <span>(514)</span></label>
+                                            <label for="c10">Châu sơn <span>(514)</span></label>
                                         </p>
                                         <p>
                                             <input type="checkbox" id="c11" name="cb">
-                                            <label for="c11">Jobs in Chennai <span>(554)</span></label>
+                                            <label for="c11">Đồng văn <span>(554)</span></label>
                                         </p>
                                         <p>
                                             <input type="checkbox" id="c12" name="cb">
-                                            <label for="c12">Jobs in Gurgaon <span>(457)</span></label>
+                                            <label for="c12">Bình lục <span>(457)</span></label>
                                         </p>
                                         <p>
                                             <input type="checkbox" id="c13" name="cb">
-                                            <label for="c13">Jobs in Noida  <span>(1254)</span></label>
+                                            <label for="c13">Ninh bình  <span>(125)</span></label>
                                         </p>
                                         <p>
                                             <input type="checkbox" id="c14" name="cb">
-                                            <label for="c14">Jobs in Kolkata <span>(554)</span></label>
+                                            <label for="c14">Gia viễn <span>(554)</span></label>
                                         </p>
-                                        <p>
-                                            <input type="checkbox" id="c15" name="cb">
-                                            <label for="c15">Jobs in Hyderabad <span>(350)</span></label>
-                                        </p>
-                                        <p>
-                                            <input type="checkbox" id="c16" name="cb">
-                                            <label for="c16">Jobs in Pune <span>(221)</span></label>
-                                        </p>
+
                                 </div>
                             </div>
                             <ul>
-                                <li><i class="fa fa-plus-circle"></i> <a href="#">SHOW MORE</a></li>
+                                <li><i class="fa fa-plus-circle"></i> <a href="#">Xem thêm</a></li>
                             </ul>
                         </div>
                     </div>
@@ -137,27 +130,18 @@
                         <div class="gc_causes_select_box_wrapper">
                             <div class="gc_causes_select_box">
                                 <select>
-                                    <option>Sort Default</option>
+                                    <option>Sắp xếp</option>
                                     <option>Sort Default</option>
                                     <option>Sort Default</option>
                                 </select><i class="fa fa-angle-down"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                        <div class="gc_causes_view_tabs_wrapper">
-                            <div class="gc_causes_view_tabs">
-                                <ul class="nav nav-pills">
-                                    <li class="active"><a data-toggle="pill" href="#grid"><i class="fa fa-th-large"></i></a></li>
-                                    <li><a data-toggle="pill" href="#list"><i class="fa fa-list"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                         <div class="gc_causes_search_box_wrapper gc_causes_search_box_wrapper2">
                             <div class="gc_causes_search_box">
-                                <p>You're Watching &nbsp;<span>01 to 20</span></p>
+                                <p>Bạn đang xem &nbsp;<span>01 đến 04</span></p>
                             </div>
                         </div>
                     </div>
@@ -176,14 +160,14 @@
                                                     <img src="images/content/job_post_img1.jpg" alt="post_img" />
                                                 </div>
                                                 <div class="jp_job_post_right_cont jp_job_post_grid_right_cont jp_cl_job_cont">
-                                                    <h4>COMERA JOB PORT</h4>
-                                                    <p>MARKETING JOB</p>
+                                                    <h4>TZ Hitech</h4>
+                                                    <p>Thời vụ</p>
                                                     <ul>
-                                                        <li><i class="fa fa-map-marker"></i>&nbsp; Caliphonia, PO 455001</li>
+                                                        <li><i class="fa fa-map-marker"></i>&nbsp; Châu Sơn, Hà Nam</li>
                                                     </ul>
                                                     <div class="jp_job_post_right_btn_wrapper jp_job_post_grid_right_btn_wrapper jp_cl_aply_btn">
                                                         <ul>
-                                                            <li><a href="#">145 ACTIVE JOBS</a></li>
+                                                            <li><a href="#">30 Người</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -193,8 +177,8 @@
                                     <div class="jp_job_post_keyword_wrapper">
                                         <ul>
                                             <li><i class="fa fa-tags"></i>Keywords :</li>
-                                            <li><a href="#">ui designer,</a></li>
-                                            <li><a href="#">developer,</a></li>
+                                            <li><a href="#">Dây dẫn,</a></li>
+                                            <li><a href="#">Nhật bản,</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -208,14 +192,14 @@
                                                     <img src="images/content/job_post_img2.jpg" alt="post_img" />
                                                 </div>
                                                 <div class="jp_job_post_right_cont jp_job_post_grid_right_cont jp_cl_job_cont">
-                                                    <h4>COMERA JOB PORT</h4>
-                                                    <p>MARKETING JOB</p>
+                                                    <h4>Kkangyin</h4>
+                                                    <p>Thời vụ</p>
                                                     <ul>
-                                                        <li><i class="fa fa-map-marker"></i>&nbsp; Caliphonia, PO 455001</li>
+                                                        <li><i class="fa fa-map-marker"></i>&nbsp; Châu Sơn, Hà Nam</li>
                                                     </ul>
                                                     <div class="jp_job_post_right_btn_wrapper jp_job_post_grid_right_btn_wrapper jp_cl_aply_btn">
                                                         <ul>
-                                                            <li><a href="#">145 ACTIVE JOBS</a></li>
+                                                            <li><a href="#">25 người</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -846,7 +830,7 @@
                                 </div>
                             </div>
                             <ul>
-                                <li><i class="fa fa-plus-circle"></i> <a href="#">SHOW MORE</a></li>
+                                <li><i class="fa fa-plus-circle"></i> <a href="#">Xem thêm</a></li>
                             </ul>
                         </div>
                     </div>

@@ -10,18 +10,18 @@
     <meta name="author" content="" />
     <meta name="MobileOptimized" content="320" />
     <!--srart theme style -->
-    <link rel="stylesheet" type="text/css" href="css/animate.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
-    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css" />
-    <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
-    <link rel="stylesheet" type="text/css" href="css/style_II.css" />
-    <link rel="stylesheet" type="text/css" href="css/responsive2.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/animate.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/font-awesome.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/fonts.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/reset.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/owl.carousel.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/owl.theme.default.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/flaticon.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style_II.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/responsive2.css')}}" />
     <!-- favicon links -->
-    <link rel="shortcut icon" type="image/png" href="images/header/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="{{asset('images/header/favicon.ico')}}" />
 </head>
 
 <body>
@@ -37,15 +37,15 @@
     {{-- footer --}}
     @include('layout.client.footer')
     <!--main js file start-->
-    <script src="js/jquery_min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.menu-aim.js"></script>
-    <script src="js/jquery.countTo.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/custom_II.js"></script>
+    <script src="{{asset('js/jquery_min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.js')}}"></script>
+    <script src="{{asset('js/jquery.menu-aim.js')}}"></script>
+    <script src="{{asset('js/jquery.countTo.js')}}"></script>
+    <script src="{{asset('js/jquery.inview.min.js')}}"></script>
+    <script src="{{asset('js/owl.carousel.js')}}"></script>
+    <script src="{{asset('js/modernizr.js')}}"></script>
+    <script src="{{asset('js/jquery.magnific-popup.js')}}"></script>
+    <script src="{{asset('js/custom_II.js')}}"></script>
     <!--main js file end-->
 </body>
 
