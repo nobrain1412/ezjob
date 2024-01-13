@@ -41,9 +41,12 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
-                                <input class="form-control" id="" type="text" name="address"
-                                    placeholder="" />
-                                <label for="">Địa chỉ</label>
+                                <select name="locationId" id="" class="form-control">
+                                    <option value="">Chọn địa điểm</option>
+                                    @foreach ($location as $l )
+                                        <option value="{{$l->id}}">{{$l->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-6">

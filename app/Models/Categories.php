@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Shift extends Model
+class Categories extends Model
 {
     use HasFactory;
-    protected $table = "shift";
+
+    protected $table = "categories";
     protected $fillable = [
         "name"
     ];
     public function job()
     {
-        return $this->hasMany(Job::class, 'shiftId', 'id');
+        return $this->hasMany(Job::class, 'categoriesId', 'id');
     }
 }

@@ -18,8 +18,9 @@
                 <div class="collapse" id="collapseLayouts-job" aria-labelledby="headingOne"
                     data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{ route('job') }}">Job</a>
+                        <a class="nav-link" href="{{ route('job.index') }}">Job</a>
                         <a class="nav-link" href="{{ route('jobType') }}">Job type</a>
+                        <a class="nav-link" href="{{ route('shift') }}">Shift</a>
                         <a class="nav-link" href="{{ route('job') }}">Categories</a>
                         <a class="nav-link" href="{{ route('company') }}">Company</a>
                         <a class="nav-link" href="{{ route('location') }}">Location</a>

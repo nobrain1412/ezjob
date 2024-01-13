@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\JobController;
 use App\Http\Controllers\Admin\JobTypeController;
 use App\Http\Controllers\Admin\LocationController;
+use App\Http\Controllers\Admin\ShiftController;
+use App\Http\Controllers\Client\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,15 +20,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client/index');
-});
+Route::get('/', [HomeController::class,'index'])->name('home');
+Route::get('/job/{id}', [HomeController::class,'single'])->name('job');
 
 Route::prefix('admin')->group(function(){
     Route::get('/',[DashboardController::class,'index'])->name('admin');
     //job
     Route::prefix('job')->group(function(){
-        Route::get('/',[JobController::class,'index'])->name('job');
+        Route::get('/',[JobController::class,'index'])->name('job.index');
         Route::match(['GET','POST'],'/add', [JobController::class,'create'])->name('job.add');
         Route::match(['GET','POST'],'/edit/{id}', [JobController::class,'edit'])->name('job.edit');
         Route::get('/delete/{id}',[JobController::class,'delete'])->name('job.delete');
@@ -34,6 +35,10 @@ Route::prefix('admin')->group(function(){
     //job type
     Route::prefix('job-type')->group(function(){
         Route::get('/',[JobTypeController::class,'index'])->name('jobType');
+    });
+    //shift
+    Route::prefix('shift')->group(function(){
+        Route::get('/',[ShiftController::class,'index'])->name('shift');
     });
     //company
     Route::prefix('company')->group(function(){

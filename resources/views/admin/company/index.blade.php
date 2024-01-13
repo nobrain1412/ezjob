@@ -44,12 +44,16 @@
                             <tr>
                                 <td>{{$d->id}}</td>
                                 <td>{{$d->name}}</td>
-                                <td>{{$d->address}}</td>
+                                <td>{{$d->location->name}}
+                                    @if ($d->location->parent)
+                                        - {{$d->location->parent->name}}
+                                    @endif
+                                </td>
                                 <td>{{$d->email}}</td>
                                 <td><img width="100" src="{{ ($d->image == null) ? asset('images/notfound.jpg') : Storage::url('images/'.$d->image) }}" alt=""></td>
                                 <td>{{$d->website}}</td>
                                 <td>{{$d->phone}}</td>
-                                <td><a href="{{$d->map}}">Map</a></td>
+                                <td><a target="_blank" href="{{$d->map}}">Map</a></td>
                                 <td>
                                     <a href="{{route('company.edit',['id' => $d->id])}}"><button class="btn btn-primary">Sửa</button></a>
                                     <a href="{{route('company.delete',['id' => $d->id])}}"><button class="btn btn-danger">Xoá</button></a>

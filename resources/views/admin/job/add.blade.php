@@ -28,9 +28,12 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input class="form-control" id="" type="text" name="email"
-                                    placeholder="" />
-                                <label for="">Email</label>
+                                <select class="form-control" name="jobTypeId" id="">
+                                    <option value="">Loại công việc</option>
+                                    @foreach ($jobType as $j )
+                                        <option value="{{$j->id}}">{{$j->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -41,32 +44,92 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
-                                <input class="form-control" id="" type="text" name="address"
+                                <input class="form-control" id="" type="text" name="salary"
                                     placeholder="" />
-                                <label for="">Địa chỉ</label>
+                                <label for="">Lương</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
-                                <input class="form-control" id="" type="input" name="map"
-                                    placeholder="" />
-                                <label for="">Link Google Map</label>
+                                <select class="form-control" name="shiftId" id="">
+                                    <option value="">Ca làm</option>
+                                    @foreach ($shift as $s )
+                                        <option value="{{$s->id}}">{{$s->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
-                                <input class="form-control" id="" type="text" name="phone"
+                                <input class="form-control" id="" type="text" name="subsidize"
                                     placeholder="" />
-                                <label for="">Số điện thoại</label>
+                                <label for="">Trợ cấp</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
-                                <input class="form-control" id="" type="input" name="website"
+                                <select class="form-control" name="companyId" id="">
+                                    <option value="">Công ty</option>
+                                    @foreach ($company as $c )
+                                        <option value="{{$c->id}}">{{$c->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3 mb-md-0">
+                                <input class="form-control" id="" type="text" name="quantity"
                                     placeholder="" />
-                                <label for="">Website</label>
+                                <label for="">Số lượng</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3 mb-md-0">
+                                <select class="form-control" name="status" id="">
+                                    <option value="">Trạng thái</option>
+                                    <option value="1">Đang tuyển</option>
+                                    <option value="0">Dừng tuyển</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3 mb-md-0">
+                                <input class="form-control" id="" type="text" name="requirement"
+                                    placeholder="" />
+                                <label for="">Yêu cầu</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3 mb-md-0">
+                                <select class="form-control" name="categoriesId" id="">
+                                    <option value="">Danh mục</option>
+                                    @foreach ($categories as $c )
+                                        <option value="{{$c->id}}">{{$c->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3 mb-md-0">
+                                <input class="form-control" id="" type="text" name="desc"
+                                    placeholder="" />
+                                <label for="">Mô tả</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3 mb-md-0">
+                                <input class="form-control" id="" type="text" name="exp"
+                                    placeholder="" />
+                                <label for="">Kinh nghiệm</label>
                             </div>
                         </div>
                     </div>
@@ -76,7 +139,6 @@
                                 <button class="btn btn-primary" type="submit">Thêm mới </button>
                             </div>
                         </div>
-
                     </div>
                 </form>
 

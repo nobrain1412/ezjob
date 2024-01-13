@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Company;
+use App\Models\Location;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Carbon;
@@ -15,12 +16,14 @@ use Yoeunes\Toastr\Facades\Toastr;
 class CompanyController extends Controller
 {
     public function index(request $request){
-        $data = Company::orderBy("id","desc")->paginate($request->per_page);
+        $data = Company::with('location')->get();
+        //dd($data);
         return view("admin/company/index", compact( "data"));
     }
     public function create(Request $request){
-
+        $location = Location::all();
         if($request->method() == "POST"){
+            //dd($request->all());
             if ($request->hasFile('image') && $request->file('image')->isValid()) {
                 $image = $request->file('image');
                 $imageName =str::slug($request->name). '-' .Carbon::now()->timestamp . '.' . $image->getClientOriginalExtension();
@@ -31,7 +34,7 @@ class CompanyController extends Controller
             $company = Company::create([
                 'name' => $request->name,
                 'email' => $request->email,
-                'address' => $request->address,
+                'locationId' => $request->locationId,
                 'image' => $imageName,
                 'map' => $request->map,
                 'phone' => $request->phone,
@@ -39,7 +42,7 @@ class CompanyController extends Controller
             ]);
             return redirect()->route('company');
         }
-        return view("admin/company/add");
+        return view("admin/company/add",compact("location"));
     }
     public function delete($id){
         if($id){

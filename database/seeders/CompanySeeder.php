@@ -13,10 +13,10 @@ class CompanySeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 1; $i <= 20; $i++) {
+        for ($i = 1; $i <= 10; $i++) {
             DB::table('company')->insert([
                 'name' => 'Company ' . $i,
-                'address' => 'Address ' . $i,
+                'locationId' => rand(1,3),
                 'email' => 'company' . $i . '@example.com',
                 'image' => '',
                 'website' => 'http://company' . $i . '.com',

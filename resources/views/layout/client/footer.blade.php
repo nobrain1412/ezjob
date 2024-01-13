@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="jp_newsletter_text">
-                        <img src="images/content/news_logo.png" class="img-responsive" alt="news_logo" />
+                        <img src="{{asset('images/content/news_logo.png')}}" class="img-responsive" alt="news_logo" />
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -24,7 +24,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="jp_footer_logo_wrapper">
                         <div class="jp_footer_logo">
-                            <a href="#"><img src="images/content/resume_logo.png" alt="footer_logo"/></a>
+                            <a href="#"><img src="{{asset('images/content/resume_logo.png')}}" alt="footer_logo"/></a>
                         </div>
                     </div>
                 </div>

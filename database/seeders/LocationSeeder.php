@@ -14,9 +14,9 @@ class LocationSeeder extends Seeder
     public function run(): void
     {
         $data = [
-            ['name' => '', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => '', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => '', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Hà nam', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Châu sơn', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Đồng văn', 'created_at' => now(), 'updated_at' => now()],
         ];
 
         DB::table('shift')->insert($data);

@@ -27,12 +27,11 @@
 <body>
    {{-- header --}}
    @include('layout.client.header')
-    <!-- jp listing sidebar Wrapper Start -->
-    <div class="jp_listing_sidebar_main_wrapper">
-        <div class="container">
-            @yield('content')
-        </div>
-    </div>
+
+
+
+
+    @yield('content')
 
     {{-- footer --}}
     @include('layout.client.footer')
