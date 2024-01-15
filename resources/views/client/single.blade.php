@@ -27,9 +27,11 @@
                             <img src="{{ asset('images/content/cs1.jpg') }}" alt="job_img">
                         </div>
                         <div class="jp_cs_com_info_img_cont">
-                            <h2>User Interface Project Manager With Comera At Mumbai Location</h2>
-                            <p>Technology Management Consulting</p>
-                            <h3><i class="fa fa-map-marker"></i> &nbsp;&nbsp;Los Angeles Califonia PO, 455001</h3>
+                            <h2>Tuyển công nhân {{$job->jobType->name}} {{$job->name}} tại công ty {{$job->company->name}} </h2>
+                            <p>{{$job->company->name}}</p>
+                            <h3><i class="fa fa-map-marker"></i> &nbsp;&nbsp;{{$job->company->location->name}} @if ($job->company->location->parent)
+                                - {{$job->company->location->parent->name}}
+                            @endif</h3>
                         </div>
                     </div>
                 </div>
@@ -55,24 +57,6 @@
                             <ul>
                                 <li><i class="fa fa-globe"></i>&nbsp;&nbsp; <a href="#">www.example.com</a></li>
                                 <li><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp; <a href="#">Download Info</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="jp_job_res">
-                            <h2>Responsibilities</h2>
-                            <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet
-                                elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec,
-                                egestas non nisi. Curabitur aliquet quam id
-                                dui posuere blandit.</p>
-                            <ul>
-                                <li><i class="fa fa-caret-right"></i>&nbsp;&nbsp; Build next-generation web applications
-                                    with a focus on the client side.</li>
-                                <li><i class="fa fa-caret-right"></i>&nbsp;&nbsp; Redesign UI's, implement new UI's, and
-                                    pick up Java as necessary.</li>
-                                <li><i class="fa fa-caret-right"></i>&nbsp;&nbsp; Explore and design dynamic and compelling
-                                    consumer experiences.</li>
-                                <li><i class="fa fa-caret-right"></i>&nbsp;&nbsp; Design and build scalable framework for
-                                    web applications.</li>
                             </ul>
                         </div>
                         <div class="jp_job_res jp_job_qua">
@@ -97,7 +81,7 @@
                         <div class="jp_job_map">
                             <h2>Loacation</h2>
                             <div id="map" style="width:100%; float:left; height:300px;">
-                                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyArTLZVDH3XAP20IqiZ0mWfGYP8Plardws&q=https%3A%2F%2Fmaps.app.goo.gl%2FMVR624D4eUAw64v56" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                                <iframe src="{{$job->company->map}}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
                         </div>
                     </div>
                     <div class="jp_listing_left_bottom_sidebar_wrapper">
@@ -125,7 +109,7 @@
                         </ul>
                     </div>
                     <div class="jp_listing_related_heading_wrapper">
-                        <h2>Related Jobs</h2>
+                        <h2>Công việc liên quan</h2>
                         <div class="jp_listing_related_slider_wrapper">
                             <div class="owl-carousel owl-theme">
                                 <div class="item">
@@ -137,342 +121,6 @@
                                                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                                                             <div class="jp_job_post_side_img">
                                                                 <img src="images/content/job_post_img1.jpg"
-                                                                    alt="post_img" />
-                                                            </div>
-                                                            <div class="jp_job_post_right_cont jp_cl_job_cont">
-                                                                <h4>COMERA JOB PORT</h4>
-                                                                <p>MARKETING JOB</p>
-                                                                <ul>
-                                                                    <li><i class="fa fa-map-marker"></i>&nbsp; Caliphonia,
-                                                                        PO 455001</li>
-                                                                </ul>
-                                                                <h5>145 ACTIVE JOBS</h5>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                            <div class="jp_job_post_right_btn_wrapper">
-                                                                <ul>
-                                                                    <li><a href="#">Follow</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="jp_job_post_keyword_wrapper">
-                                                    <ul>
-                                                        <li><i class="fa fa-tags"></i>Keywords :</li>
-                                                        <li><a href="#">ui designer,</a></li>
-                                                        <li><a href="#">developer,</a></li>
-                                                        <li><a href="#">senior</a></li>
-                                                        <li><a href="#">it company,</a></li>
-                                                        <li><a href="#">design,</a></li>
-                                                        <li><a href="#">call center</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="jp_job_post_main_wrapper_cont jp_job_post_grid_main_wrapper_cont">
-                                                <div class="jp_job_post_main_wrapper">
-                                                    <div class="row">
-                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                            <div class="jp_job_post_side_img">
-                                                                <img src="images/content/job_post_img2.jpg"
-                                                                    alt="post_img" />
-                                                            </div>
-                                                            <div class="jp_job_post_right_cont jp_cl_job_cont">
-                                                                <h4>COMERA JOB PORT</h4>
-                                                                <p>MARKETING JOB</p>
-                                                                <ul>
-                                                                    <li><i class="fa fa-map-marker"></i>&nbsp; Caliphonia,
-                                                                        PO 455001</li>
-                                                                </ul>
-                                                                <h5>145 ACTIVE JOBS</h5>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                            <div class="jp_job_post_right_btn_wrapper">
-                                                                <ul>
-                                                                    <li><a href="#">Follow</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="jp_job_post_keyword_wrapper">
-                                                    <ul>
-                                                        <li><i class="fa fa-tags"></i>Keywords :</li>
-                                                        <li><a href="#">ui designer,</a></li>
-                                                        <li><a href="#">developer,</a></li>
-                                                        <li><a href="#">senior</a></li>
-                                                        <li><a href="#">it company,</a></li>
-                                                        <li><a href="#">design,</a></li>
-                                                        <li><a href="#">call center</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="jp_job_post_main_wrapper_cont jp_job_post_grid_main_wrapper_cont">
-                                                <div class="jp_job_post_main_wrapper">
-                                                    <div class="row">
-                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                            <div class="jp_job_post_side_img">
-                                                                <img src="images/content/job_post_img3.jpg"
-                                                                    alt="post_img" />
-                                                            </div>
-                                                            <div class="jp_job_post_right_cont jp_cl_job_cont">
-                                                                <h4>COMERA JOB PORT</h4>
-                                                                <p>MARKETING JOB</p>
-                                                                <ul>
-                                                                    <li><i class="fa fa-map-marker"></i>&nbsp; Caliphonia,
-                                                                        PO 455001</li>
-                                                                </ul>
-                                                                <h5>145 ACTIVE JOBS</h5>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                            <div class="jp_job_post_right_btn_wrapper">
-                                                                <ul>
-                                                                    <li><a href="#">Follow</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="jp_job_post_keyword_wrapper">
-                                                    <ul>
-                                                        <li><i class="fa fa-tags"></i>Keywords :</li>
-                                                        <li><a href="#">ui designer,</a></li>
-                                                        <li><a href="#">developer,</a></li>
-                                                        <li><a href="#">senior</a></li>
-                                                        <li><a href="#">it company,</a></li>
-                                                        <li><a href="#">design,</a></li>
-                                                        <li><a href="#">call center</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="jp_job_post_main_wrapper_cont jp_job_post_grid_main_wrapper_cont">
-                                                <div class="jp_job_post_main_wrapper">
-                                                    <div class="row">
-                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                            <div class="jp_job_post_side_img">
-                                                                <img src="images/content/job_post_img1.jpg"
-                                                                    alt="post_img" />
-                                                            </div>
-                                                            <div class="jp_job_post_right_cont jp_cl_job_cont">
-                                                                <h4>COMERA JOB PORT</h4>
-                                                                <p>MARKETING JOB</p>
-                                                                <ul>
-                                                                    <li><i class="fa fa-map-marker"></i>&nbsp; Caliphonia,
-                                                                        PO 455001</li>
-                                                                </ul>
-                                                                <h5>145 ACTIVE JOBS</h5>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                            <div class="jp_job_post_right_btn_wrapper">
-                                                                <ul>
-                                                                    <li><a href="#">Follow</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="jp_job_post_keyword_wrapper">
-                                                    <ul>
-                                                        <li><i class="fa fa-tags"></i>Keywords :</li>
-                                                        <li><a href="#">ui designer,</a></li>
-                                                        <li><a href="#">developer,</a></li>
-                                                        <li><a href="#">senior</a></li>
-                                                        <li><a href="#">it company,</a></li>
-                                                        <li><a href="#">design,</a></li>
-                                                        <li><a href="#">call center</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="jp_job_post_main_wrapper_cont jp_job_post_grid_main_wrapper_cont">
-                                                <div class="jp_job_post_main_wrapper">
-                                                    <div class="row">
-                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                            <div class="jp_job_post_side_img">
-                                                                <img src="images/content/job_post_img2.jpg"
-                                                                    alt="post_img" />
-                                                            </div>
-                                                            <div class="jp_job_post_right_cont jp_cl_job_cont">
-                                                                <h4>COMERA JOB PORT</h4>
-                                                                <p>MARKETING JOB</p>
-                                                                <ul>
-                                                                    <li><i class="fa fa-map-marker"></i>&nbsp; Caliphonia,
-                                                                        PO 455001</li>
-                                                                </ul>
-                                                                <h5>145 ACTIVE JOBS</h5>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                            <div class="jp_job_post_right_btn_wrapper">
-                                                                <ul>
-                                                                    <li><a href="#">Follow</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="jp_job_post_keyword_wrapper">
-                                                    <ul>
-                                                        <li><i class="fa fa-tags"></i>Keywords :</li>
-                                                        <li><a href="#">ui designer,</a></li>
-                                                        <li><a href="#">developer,</a></li>
-                                                        <li><a href="#">senior</a></li>
-                                                        <li><a href="#">it company,</a></li>
-                                                        <li><a href="#">design,</a></li>
-                                                        <li><a href="#">call center</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="jp_job_post_main_wrapper_cont jp_job_post_grid_main_wrapper_cont">
-                                                <div class="jp_job_post_main_wrapper">
-                                                    <div class="row">
-                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                            <div class="jp_job_post_side_img">
-                                                                <img src="images/content/job_post_img3.jpg"
-                                                                    alt="post_img" />
-                                                            </div>
-                                                            <div class="jp_job_post_right_cont jp_cl_job_cont">
-                                                                <h4>COMERA JOB PORT</h4>
-                                                                <p>MARKETING JOB</p>
-                                                                <ul>
-                                                                    <li><i class="fa fa-map-marker"></i>&nbsp; Caliphonia,
-                                                                        PO 455001</li>
-                                                                </ul>
-                                                                <h5>145 ACTIVE JOBS</h5>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                            <div class="jp_job_post_right_btn_wrapper">
-                                                                <ul>
-                                                                    <li><a href="#">Follow</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="jp_job_post_keyword_wrapper">
-                                                    <ul>
-                                                        <li><i class="fa fa-tags"></i>Keywords :</li>
-                                                        <li><a href="#">ui designer,</a></li>
-                                                        <li><a href="#">developer,</a></li>
-                                                        <li><a href="#">senior</a></li>
-                                                        <li><a href="#">it company,</a></li>
-                                                        <li><a href="#">design,</a></li>
-                                                        <li><a href="#">call center</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="jp_job_post_main_wrapper_cont jp_job_post_grid_main_wrapper_cont">
-                                                <div class="jp_job_post_main_wrapper">
-                                                    <div class="row">
-                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                            <div class="jp_job_post_side_img">
-                                                                <img src="images/content/job_post_img1.jpg"
-                                                                    alt="post_img" />
-                                                            </div>
-                                                            <div class="jp_job_post_right_cont jp_cl_job_cont">
-                                                                <h4>COMERA JOB PORT</h4>
-                                                                <p>MARKETING JOB</p>
-                                                                <ul>
-                                                                    <li><i class="fa fa-map-marker"></i>&nbsp; Caliphonia,
-                                                                        PO 455001</li>
-                                                                </ul>
-                                                                <h5>145 ACTIVE JOBS</h5>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                            <div class="jp_job_post_right_btn_wrapper">
-                                                                <ul>
-                                                                    <li><a href="#">Follow</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="jp_job_post_keyword_wrapper">
-                                                    <ul>
-                                                        <li><i class="fa fa-tags"></i>Keywords :</li>
-                                                        <li><a href="#">ui designer,</a></li>
-                                                        <li><a href="#">developer,</a></li>
-                                                        <li><a href="#">senior</a></li>
-                                                        <li><a href="#">it company,</a></li>
-                                                        <li><a href="#">design,</a></li>
-                                                        <li><a href="#">call center</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="jp_job_post_main_wrapper_cont jp_job_post_grid_main_wrapper_cont">
-                                                <div class="jp_job_post_main_wrapper">
-                                                    <div class="row">
-                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                            <div class="jp_job_post_side_img">
-                                                                <img src="images/content/job_post_img2.jpg"
-                                                                    alt="post_img" />
-                                                            </div>
-                                                            <div class="jp_job_post_right_cont jp_cl_job_cont">
-                                                                <h4>COMERA JOB PORT</h4>
-                                                                <p>MARKETING JOB</p>
-                                                                <ul>
-                                                                    <li><i class="fa fa-map-marker"></i>&nbsp; Caliphonia,
-                                                                        PO 455001</li>
-                                                                </ul>
-                                                                <h5>145 ACTIVE JOBS</h5>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                            <div class="jp_job_post_right_btn_wrapper">
-                                                                <ul>
-                                                                    <li><a href="#">Follow</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="jp_job_post_keyword_wrapper">
-                                                    <ul>
-                                                        <li><i class="fa fa-tags"></i>Keywords :</li>
-                                                        <li><a href="#">ui designer,</a></li>
-                                                        <li><a href="#">developer,</a></li>
-                                                        <li><a href="#">senior</a></li>
-                                                        <li><a href="#">it company,</a></li>
-                                                        <li><a href="#">design,</a></li>
-                                                        <li><a href="#">call center</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="jp_job_post_main_wrapper_cont jp_job_post_grid_main_wrapper_cont">
-                                                <div class="jp_job_post_main_wrapper">
-                                                    <div class="row">
-                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                            <div class="jp_job_post_side_img">
-                                                                <img src="images/content/job_post_img3.jpg"
                                                                     alt="post_img" />
                                                             </div>
                                                             <div class="jp_job_post_right_cont jp_cl_job_cont">

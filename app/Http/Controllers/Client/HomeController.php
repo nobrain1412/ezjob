@@ -29,8 +29,9 @@ class HomeController extends Controller
     public function single($id){
         $job = Job::with('jobType','shift','company','categories')->find($id);
         $googleApiKey = "AIzaSyArTLZVDH3XAP20IqiZ0mWfGYP8Plardws";
-        $apiUrl = "https://www.google.com/maps/embed/v1/place?key={$googleApiKey}&q=" . urlencode($job->company->map);
-        dd();
+        $apiUrl = "https://www.google.com/maps/embed/v1/place?key={$googleApiKey}&q={urlencode($job->company->map)}";
+        $job->company->map = $apiUrl;
+        //dd($job->company->map);
         return view ("client.single",compact("job"));
     }
 }

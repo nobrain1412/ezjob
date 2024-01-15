@@ -21,7 +21,7 @@
                         <a class="nav-link" href="{{ route('job.index') }}">Job</a>
                         <a class="nav-link" href="{{ route('jobType') }}">Job type</a>
                         <a class="nav-link" href="{{ route('shift') }}">Shift</a>
-                        <a class="nav-link" href="{{ route('job') }}">Categories</a>
+                        <a class="nav-link" href="{{ route('job.index') }}">Categories</a>
                         <a class="nav-link" href="{{ route('company') }}">Company</a>
                         <a class="nav-link" href="{{ route('location') }}">Location</a>
                     </nav>
@@ -36,7 +36,7 @@
                 <div class="collapse" id="collapseLayouts-user" aria-labelledby="headingOne"
                     data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{ route('job') }}">User</a>
+                        <a class="nav-link" href="{{ route('job.index') }}">User</a>
 
                     </nav>
                 </div>
