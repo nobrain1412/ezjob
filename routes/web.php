@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/job/{id}', [HomeController::class,'single'])->name('job');
+route::get('/test',function(){return view('client.test');});
 
 Route::prefix('admin')->group(function(){
     Route::get('/',[DashboardController::class,'index'])->name('admin');

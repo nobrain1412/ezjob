@@ -1,6 +1,10 @@
 @extends('layout.client')
 @section('content')
     <div class="jp_bottom_footer_Wrapper_header_img_wrapper">
+
+        <div id="fb-root"></div>
+        <div id="fb-customer-chat" class="fb-customerchat"></div>
+
         <div class="jp_slide_img_overlay"></div>
         <div class="jp_banner_heading_cont_wrapper">
             <div class="container">
@@ -22,10 +26,9 @@
                                 <div class="jp_form_location_wrapper">
                                     <i class="fa fa-dot-circle-o first_icon"></i><select>
                                         <option>Chọn địa điểm</option>
-                                        <option>Select Location</option>
-                                        <option>Select Location</option>
-                                        <option>Select Location</option>
-                                        <option>Select Location</option>
+                                        @foreach ($location as $l)
+                                            <option value="{{ $l->id }}">{{ $l->name }}</option>
+                                        @endforeach
                                     </select><i class="fa fa-angle-down second_icon"></i>
                                 </div>
                             </div>
@@ -33,10 +36,9 @@
                                 <div class="jp_form_exper_wrapper">
                                     <i class="fa fa-dot-circle-o first_icon"></i><select>
                                         <option>Loại công việc</option>
-                                        <option>Experience</option>
-                                        <option>Experience</option>
-                                        <option>Experience</option>
-                                        <option>Experience</option>
+                                        @foreach ($jobType as $l)
+                                            <option value="{{ $l->id }}">{{ $l->name }}</option>
+                                        @endforeach
                                     </select><i class="fa fa-angle-down second_icon"></i>
                                 </div>
                             </div>
@@ -54,12 +56,12 @@
                             <div class="jp_banner_main_jobs">
                                 <ul>
                                     <li><i class="fa fa-tags"></i> Từ khoá phổ biến :</li>
-                                    <li><a href="#">ui designer,</a></li>
-                                    <li><a href="#">developer,</a></li>
-                                    <li><a href="#">senior</a></li>
-                                    <li><a href="#">it company,</a></li>
-                                    <li><a href="#">design,</a></li>
-                                    <li><a href="#">call center</a></li>
+                                    @foreach ($shift as $s)
+                                        <li><a href="#">{{ $s->name }},</a></li>
+                                    @endforeach
+                                    @foreach ($categories as $s)
+                                        <li><a href="#">{{ $s->name }},</a></li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -358,4 +360,31 @@
             </div>
         </div>
     </div>
+
 @endsection
+@push('scripts')
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "185634164623700");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+@endpush

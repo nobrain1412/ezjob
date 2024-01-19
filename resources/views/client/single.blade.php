@@ -1,6 +1,14 @@
 @extends('layout.client')
 @section('content')
     <div class="jp_tittle_main_wrapper jp_cs_tittle_main_wrapper">
+        <!-- Messenger Plugin chat Code -->
+        <div id="fb-root">
+            <h1>ms</h1>
+        </div>
+        <!-- Your Plugin    chat code -->
+        <div id="fb-customer-chat" class="fb-customerchat">
+
+        </div>
         <div class="jp_tittle_img_overlay"></div>
         <div class="container">
             <div class="row">
@@ -14,7 +22,7 @@
                                 <ul>
                                     <li><a href="{{ route('home') }}">Home</a> <i class="fa fa-angle-right"></i></li>
                                     {{-- <li><a href="#">Company</a> <i class="fa fa-angle-right"></i></li>
-                                <li><a href="#">IT</a> <i class="fa fa-angle-right"></i></li> --}}
+                                    <li><a href="#">IT</a> <i class="fa fa-angle-right"></i></li> --}}
                                     <li>{{ $job->name }}</li>
                                 </ul>
                             </div>
@@ -27,11 +35,14 @@
                             <img src="{{ asset('images/content/cs1.jpg') }}" alt="job_img">
                         </div>
                         <div class="jp_cs_com_info_img_cont">
-                            <h2>Tuyển công nhân {{$job->jobType->name}} {{$job->name}} tại công ty {{$job->company->name}} </h2>
-                            <p>{{$job->company->name}}</p>
-                            <h3><i class="fa fa-map-marker"></i> &nbsp;&nbsp;{{$job->company->location->name}} @if ($job->company->location->parent)
-                                - {{$job->company->location->parent->name}}
-                            @endif</h3>
+                            <h2>Tuyển công nhân {{ $job->jobType->name }} {{ $job->name }} tại công ty
+                                {{ $job->company->name }} </h2>
+                            <p>{{ $job->company->name }}</p>
+                            <h3><i class="fa fa-map-marker"></i> &nbsp;&nbsp;{{ $job->company->location->name }}
+                                @if ($job->company->location->parent)
+                                    - {{ $job->company->location->parent->name }}
+                                @endif
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -81,7 +92,9 @@
                         <div class="jp_job_map">
                             <h2>Loacation</h2>
                             <div id="map" style="width:100%; float:left; height:300px;">
-                                <iframe src="{{$job->company->map}}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                                <iframe src="{{ $job->company->map }}" width="100%" height="450" style="border:0;"
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
                     </div>
                     <div class="jp_listing_left_bottom_sidebar_wrapper">
@@ -165,7 +178,30 @@
             </div>
         </div>
     </div>
-    @push('scripts')
-
-    @endpush
 @endsection
+@push('scripts')
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "185634164623700");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+@endpush

@@ -17,5 +17,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/resources/views/layout/client.blade.php
-/resources/views/layout/admin.blade.php
+# /resources/views/layout/client.blade.php
+# /resources/views/layout/admin.blade.php
