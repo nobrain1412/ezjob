@@ -57,7 +57,7 @@
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     <div class="jp_listing_left_sidebar_wrapper">
                         <div class="jp_job_des">
-                            <h2>Company Description</h2>
+                            <h2>Mô tả công ty</h2>
                             <p>Google is and always will be an engineering company. We hire people with a broad set of ical
                                 skills who are ready to tackle some of technology's greatest challenges and make an impact
                                 on millions, if not billions, of users.
@@ -65,13 +65,10 @@
                                 scalability and storage solutions, large-scale applications and rely new platforms for
                                 developers around the world. From AdWords to Chrome,
                                 Android to Ye, Social to Local, Google engineers are changing the world.</p>
-                            <ul>
-                                <li><i class="fa fa-globe"></i>&nbsp;&nbsp; <a href="#">www.example.com</a></li>
-                                <li><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp; <a href="#">Download Info</a></li>
-                            </ul>
+                            <a target="_blank" href="{{$job->company->map}}"><button class="btn btn-primary">Link dẫn đến google map </button></a>
                         </div>
                         <div class="jp_job_res jp_job_qua">
-                            <h2>Minimum qualifications</h2>
+                            <h2>Yêu cầu công việc</h2>
                             <ul>
                                 <li><i class="fa fa-caret-right"></i>&nbsp;&nbsp; BA/BS degree in a technical field or
                                     equivalent practical experience.</li>
@@ -82,17 +79,22 @@
                                 <li><i class="fa fa-caret-right"></i>&nbsp;&nbsp; Experience with AJAX, HTML and CSS.</li>
                             </ul>
                         </div>
-                        <div class="jp_job_Follow">
-                            <h2>How To Follow</h2>
-                            <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam
-                                id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla
-                                sit amet nisl tempus convallis quis ac
-                                lectus.</p>
+                        <div class="jp_job_res jp_job_qua">
+                            <h2>Quyền lợi</h2>
+                            <ul>
+                                <li><i class="fa fa-caret-right"></i>&nbsp;&nbsp; BA/BS degree in a technical field or
+                                    equivalent practical experience.</li>
+                                <li><i class="fa fa-caret-right"></i>&nbsp;&nbsp; 2 years of relevant work experience in
+                                    software development.</li>
+                                <li><i class="fa fa-caret-right"></i>&nbsp;&nbsp; Programming experience in C, C++ or Java.
+                                </li>
+                                <li><i class="fa fa-caret-right"></i>&nbsp;&nbsp; Experience with AJAX, HTML and CSS.</li>
+                            </ul>
                         </div>
                         <div class="jp_job_map">
-                            <h2>Loacation</h2>
+                            <h2>Địa điểm</h2>
                             <div id="map" style="width:100%; float:left; height:300px;">
-                                <iframe src="{{ $job->company->map }}" width="100%" height="450" style="border:0;"
+                                <iframe src="{{ $apiUrl }}" width="100%" height="450" style="border:0;"
                                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>

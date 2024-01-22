@@ -93,7 +93,7 @@
                                                 @foreach ($location as $l)
                                                     <p>
                                                         <input type="checkbox" id="c109" name="cb">
-                                                        <label for="c109">{{ $l->name }} <span>(10)</span></label>
+                                                        <label for="c109">{{ $l->name }} </label>
                                                     </p>
                                                 @endforeach
                                             </div>
@@ -119,7 +119,8 @@
                                                 @foreach ($jobType as $j)
                                                     <p>
                                                         <input type="checkbox" id="c109" name="cb">
-                                                        <label for="c109">{{ $j->name }} <span>(10)</span></label>
+                                                        {{-- loop span in label for number --}}
+                                                        <label for="c109">{{ $j->name }} </label>
                                                     </p>
                                                 @endforeach
                                             </div>
@@ -140,7 +141,8 @@
                                                 @foreach ($shift as $s)
                                                     <p>
                                                         <input type="checkbox" id="c109" name="cb">
-                                                        <label for="c109">{{ $s->name }} <span>(10)</span></label>
+                                                        {{-- loop span in label for number --}}
+                                                        <label for="c109">{{ $s->name }} </label>
                                                     </p>
                                                 @endforeach
                                             </div>
@@ -317,9 +319,8 @@
                                             <div class="box">
                                                 @foreach ($jobType as $j)
                                                     <p>
-                                                        <input type="checkbox" id="c109" name="cb">
-                                                        <label for="c109">{{ $j->name }}
-                                                            <span>(10)</span></label>
+                                                        <input type="checkbox" id="{{$j->id}}" name="cb">
+                                                        <label for="c109">{{ $j->name }}</label>
                                                     </p>
                                                 @endforeach
                                             </div>
