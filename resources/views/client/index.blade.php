@@ -337,7 +337,7 @@
                                 <div class="jp_add_resume_img_overlay"></div>
                                 <div class="jp_add_resume_cont">
                                     <img src="images/content/resume_logo.png" alt="logo" />
-                                    <h4>Get Best Matched Jobs On your Email. Add Resume NOW!</h4>
+                                    <h4>For fuck sake, get a job you fucking useless</h4>
                                     <ul>
                                         <li><a href="#"><i class="fa fa-plus-circle"></i> &nbsp;ADD RESUME</a></li>
                                     </ul>
