@@ -12,7 +12,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.jobpro.top
-        username: nobrain@jobpro.top
-        password: Quangdang4157
-
+        server: ftpupload.net
+        username: if0_35671838
+        password: rZTFOHeInTb1
+        server-dir: /htdocs/
