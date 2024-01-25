@@ -1,6 +1,6 @@
 
 on: push
-name: 🚀 Deploy website on push
+name: Main host
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -15,4 +15,4 @@ jobs:
         server: ftp.jobpro.top
         username: nobrain@jobpro.top
         password: Quangdang4157
-        server-dir: /
+

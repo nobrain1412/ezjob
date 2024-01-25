@@ -1,6 +1,6 @@
 
 on: push
-name: 🚀 Deploy website on push
+name: Test host
 jobs:
   web-deploy:
     name: 🎉 Deploy
