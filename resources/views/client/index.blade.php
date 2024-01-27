@@ -26,6 +26,7 @@
                                 <div class="jp_form_location_wrapper">
                                     <i class="fa fa-dot-circle-o first_icon"></i><select>
                                         <option>Chọn địa điểm</option>
+                                        <option value="">LMAO</option>
                                         @foreach ($location as $l)
                                             <option value="{{ $l->id }}">{{ $l->name }}</option>
                                         @endforeach
