@@ -28,14 +28,15 @@ class HomeController extends Controller
         $categories = Categories::all();
         $length = 11;
         $randomString = Str::random($length);
+
         return view("client.index",compact("job","location","jobType","shift","categories"));
     }
 
     public function single($id){
         $job = Job::with('jobType','shift','company','categories')->find($id);
-        $googleApiKey = "AIzaSyArTLZVDH3XAP20IqiZ0mWfGYP8Plardws";
-        $apiUrl = "https://www.google.com/maps/embed/v1/place?key={$googleApiKey}&q={urlencode($job->company->map)}";
-
+        $googleApiKey = "AIzaSyBkIgWnLA2hsPjvuaLw-FFQ04csRZsT8Ds";
+        $apiUrl = "https://www.google.com/maps/embed/v1/place?key={$googleApiKey}&q=".urlencode($job->company->map);
+        //dd($apiUrl);
         //dd($job->company->map);
         return view ("client.single",compact("job","apiUrl"));
     }

@@ -26,7 +26,7 @@
                                 <div class="jp_form_location_wrapper">
                                     <i class="fa fa-dot-circle-o first_icon"></i><select>
                                         <option>Chọn địa điểm</option>
-                                        <option value="">LMAO</option>
+
                                         @foreach ($location as $l)
                                             <option value="{{ $l->id }}">{{ $l->name }}</option>
                                         @endforeach
@@ -195,6 +195,7 @@
                             <div class="tab-content">
                                 <div id="grid" class="tab-pane fade in active">
                                     <div class="row">
+
                                         @foreach ($job as $d)
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                 <div

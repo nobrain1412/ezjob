@@ -19,6 +19,6 @@ class LocationSeeder extends Seeder
             ['name' => 'Đồng văn', 'created_at' => now(), 'updated_at' => now()],
         ];
 
-        DB::table('shift')->insert($data);
+        DB::table('location')->insert($data);
     }
 }
