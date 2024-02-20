@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/map', function(){return(redirect('https://maps.app.goo.gl/pXvSKzTB2jzhrHLP6'));});
+Route::get('/map', function(){return(redirect('https://maps.app.goo.gl/5d41zZjEMK8hqVo7A'));});
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/job/{id}', [HomeController::class,'single'])->name('job');
 route::get('/test',function(){return view('client.test');});
